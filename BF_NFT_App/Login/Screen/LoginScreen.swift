@@ -10,6 +10,7 @@ import UIKit
 protocol loginScreenProcotol: AnyObject{
     func tappedRPMButton()
     func tappedLoginButton()
+    func tappedMetaMaskButton()
 }
 
 class LoginScreen: UIView {
@@ -26,6 +27,14 @@ class LoginScreen: UIView {
         image.image = UIImage(named: "BG Login 1")
         image.contentMode = .scaleToFill
         
+        return image
+    }()
+    
+    lazy var logoLoginScreen : UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Vector (1)")
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -55,13 +64,17 @@ class LoginScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 10
-        tf.layer.borderWidth = 0.4
+        tf.layer.borderWidth = 1.2
         tf.borderStyle = .roundedRect
         tf.layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
-        tf.placeholder = "Login"
+        tf.backgroundColor = .darkGray.withAlphaComponent(0.8)
+        tf.attributedPlaceholder = NSAttributedString(
+            string: "Login",
+            attributes: [NSAttributedString.Key.foregroundColor:  UIColor.white.withAlphaComponent(0.4)]
+        )
         tf.font = UIFont.systemFont(ofSize: 15)
         tf.textColor = UIColor.white
-        tf.backgroundColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.0)
+        
         return tf
     }()
     
@@ -70,13 +83,17 @@ class LoginScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 10
-        tf.layer.borderWidth = 0.4
+        tf.layer.borderWidth = 1.2
         tf.borderStyle = .roundedRect
         tf.layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
-        tf.placeholder = "Password"
+        tf.backgroundColor = .darkGray.withAlphaComponent(0.8)
+        tf.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor:  UIColor.white.withAlphaComponent(0.4)]
+        )
         tf.font = UIFont.systemFont(ofSize: 15)
         tf.textColor = UIColor.white
-        tf.backgroundColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.0)
+        
         return tf
     }()
     
@@ -98,7 +115,7 @@ class LoginScreen: UIView {
     }
     
     lazy var LoginButton : UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Entrar", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -113,10 +130,54 @@ class LoginScreen: UIView {
         print(#function)
         self.delegate?.tappedLoginButton()
     }
+        
+    lazy var lineView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
     
+    lazy var metaMaskView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.purple.cgColor
+        return view
+    }()
+    
+    lazy var metaMaskButtonLabelContent: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Entrar com o MetaMask"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.textColor = .white
+        return label
+    }()
+    lazy var metaMaskButtonLogoContent: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Logo")
+        image.contentMode = .scaleToFill
+        return image
+    }()
+    
+    lazy var metaMaskButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tappedMetaMaskButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func tappedMetaMaskButton(){
+        delegate?.tappedMetaMaskButton()
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBlue
         loadElements()
         configElements()
     }
@@ -127,12 +188,18 @@ class LoginScreen: UIView {
     
     func loadElements(){
         addSubview(backgroundImage)
+        addSubview(logoLoginScreen)
         addSubview(titleLogin)
         addSubview(descriptionLogin)
         addSubview(loginTextField)
         addSubview(passwordTextField)
         addSubview(RMPbutton)
         addSubview(LoginButton)
+        addSubview(lineView)
+        addSubview(metaMaskView )
+        addSubview(metaMaskButton)
+        metaMaskView .addSubview(metaMaskButtonLogoContent)
+        metaMaskView .addSubview(metaMaskButtonLabelContent)
         
     }
     
@@ -144,8 +211,13 @@ class LoginScreen: UIView {
             backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor),
             
+            logoLoginScreen.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            logoLoginScreen.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            logoLoginScreen.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            logoLoginScreen.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logoLoginScreen.heightAnchor.constraint(equalToConstant: 120),
             
-            titleLogin.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
+            titleLogin.topAnchor.constraint(equalTo: logoLoginScreen.bottomAnchor, constant: 20),
             titleLogin.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             titleLogin.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             titleLogin.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -174,10 +246,35 @@ class LoginScreen: UIView {
             LoginButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
             LoginButton.heightAnchor.constraint(equalToConstant: 45),
             
-    
+            lineView.topAnchor.constraint(equalTo: LoginButton.bottomAnchor, constant: 40),
+            lineView.leadingAnchor.constraint(equalTo: LoginButton.leadingAnchor),
+            lineView.trailingAnchor.constraint(equalTo: LoginButton.trailingAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: 0.5),
             
-        
+            metaMaskView.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 40),
+            metaMaskView.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
+            metaMaskView.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            metaMaskView.heightAnchor.constraint(equalToConstant: 50),
+            
+            metaMaskButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 40),
+            metaMaskButton .leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
+            metaMaskButton .trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            metaMaskButton .heightAnchor.constraint(equalToConstant: 50),
+            
+            metaMaskButtonLogoContent.leadingAnchor.constraint(equalTo: metaMaskView.leadingAnchor, constant: 53),
+            metaMaskButtonLogoContent.centerYAnchor.constraint(equalTo: metaMaskView.centerYAnchor),
+            metaMaskButtonLogoContent.heightAnchor.constraint(equalToConstant: 25),
+            metaMaskButtonLogoContent.widthAnchor.constraint(equalToConstant: 25),
+            
+            metaMaskButtonLabelContent.leadingAnchor.constraint(equalTo: metaMaskButtonLogoContent.trailingAnchor, constant: 20),
+            metaMaskButtonLabelContent.trailingAnchor.constraint(equalTo: metaMaskView .trailingAnchor, constant: -5),
+            metaMaskButtonLabelContent.centerYAnchor.constraint(equalTo: metaMaskView .centerYAnchor),
         ])
+    }
+    
+    func delegateTextField(delegate: UITextFieldDelegate){
+        self.loginTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
     }
     
     

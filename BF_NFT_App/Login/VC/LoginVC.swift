@@ -19,18 +19,38 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginScreen?.delegate(assinatura: self)
+        loginScreen?.delegateTextField(delegate: self)
     }
 }
 
 extension LoginVC : loginScreenProcotol {
+    func tappedMetaMaskButton() {
+        print("Cheguei na VC")
+    }
+    
     func tappedRPMButton() {
         print("Cheguei na VC")
     }
     
     func tappedLoginButton() {
-        print("Cheguei na VC")
+        let vc = HomeVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension LoginVC : UITextFieldDelegate {
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print(#function)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(#function)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+
     
 }
 
