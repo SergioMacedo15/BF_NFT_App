@@ -14,7 +14,7 @@ class Alert {
     init(controller: UIViewController) {
         self.controller = controller
     }
-    
+     
     public func showAlertInformation(title: String, message: String , completion: (() -> Void)? = nil){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { action in
