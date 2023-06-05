@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696821010791-r0ugvasr52s0ce1vb8kdf5bs6f5u4l06.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696821010791-r0ugvasr52s0ce1vb8kdf5bs6f5u4l06</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDWBYnLUp7MxeLM4zN5nYu86HmYdkKZbhA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696821010791</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SergioMacedo.BF-NFT-App</string>
+	<key>PROJECT_ID</key>
+	<string>appbackfrontnft-d8e78</string>
+	<key>STORAGE_BUCKET</key>
+	<string>appbackfrontnft-d8e78.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696821010791:ios:658d2a4ff3335f6a839fc2</string>
+</dict>
+</plist>

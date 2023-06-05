@@ -8,22 +8,39 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
-    var loginScreen : LoginScreen?
+    
+    private var screen : LoginScreen?
+    private var viewModel : LoginViewModel = LoginViewModel()
     
     override func loadView() {
-        loginScreen = LoginScreen()
-        view = loginScreen
+        screen = LoginScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginScreen?.delegate(assinatura: self)
-        loginScreen?.delegateTextField(delegate: self)
+        hideKeyboardWhenTappedAround()
+        screen?.delegate(delegate: self)
+        viewModel.delegate(delegate: self)
+        screen?.configTextFieldsDelegate(delegate: self)
+    }
+    
+}
+
+extension LoginVC : LoginViewModelProtocol {
+    func errorLogin() {
+        Alert(controller: self).showAlertInformation(title: "Error", message: "Erro de login, email e/ou senha não conferem") {
+            self.screen?.passwordTextField.text = ""
+        }
+    }
+    
+    func sucessLogin() {
+        let vc = HomeVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension LoginVC : loginScreenProcotol {
+extension LoginVC : LoginScreenProtocol {
     func tappedMetaMaskButton() {
         print("Cheguei na VC")
     }
@@ -33,8 +50,7 @@ extension LoginVC : loginScreenProcotol {
     }
     
     func tappedLoginButton() {
-        let vc = HomeVC()
-        navigationController?.pushViewController(vc, animated: true)
+        viewModel.AuthLogin(Email: screen?.emailTextField.text ?? "" , Password: screen?.passwordTextField.text ?? "")
     }
 }
 
@@ -44,13 +60,16 @@ extension LoginVC : UITextFieldDelegate {
         print(#function)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(#function)
+        guard let screen = screen else {return}
+        viewModel.ValidateLoginProfile(textField: textField, Screen: screen)
+        viewModel.isEnableLoginButton(Screen: screen)
+        
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
-
+    
     
 }
 
