@@ -12,14 +12,13 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        // Do any additional setup after loading the view.
+        
     }
     
     private func setupTabBar(){
         let home = UINavigationController(rootViewController: HomeVC())
         let profile = UINavigationController(rootViewController: ProfileVC())
         let details = UINavigationController(rootViewController: DetailsVC())
-        
         
         setViewControllers([home, profile, details], animated: true)
         tabBar.isTranslucent = false
