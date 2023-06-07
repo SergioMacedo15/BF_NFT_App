@@ -13,6 +13,12 @@
 		31137FCA2A1506DA00FF8AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31137FC92A1506DA00FF8AD9 /* Assets.xcassets */; };
 		31137FCD2A1506DA00FF8AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137FCB2A1506DA00FF8AD9 /* LaunchScreen.storyboard */; };
 		31137FD82A150AB200FF8AD9 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31137FD72A150AB200FF8AD9 /* LoginScreen.swift */; };
+		3157AC642A3078E9009D03C7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC632A3078E9009D03C7 /* HomeViewModel.swift */; };
+		3157AC682A30795A009D03C7 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC672A30795A009D03C7 /* HomeServices.swift */; };
+		3157AC6A2A30798F009D03C7 /* GenericServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC692A30798F009D03C7 /* GenericServices.swift */; };
+		3157AC6E2A307D79009D03C7 /* WalletData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3157AC6C2A307D79009D03C7 /* WalletData.json */; };
+		3157AC6F2A307D79009D03C7 /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3157AC6D2A307D79009D03C7 /* HomeData.json */; };
+		3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC712A307E28009D03C7 /* HomeModel.swift */; };
 		3167C1A22A2CE0AE00085E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A12A2CE0AE00085E04 /* FirebaseAuth */; };
 		3167C1A42A2CE0AE00085E04 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A32A2CE0AE00085E04 /* FirebaseCrashlytics */; };
 		3167C1A62A2CE93100085E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */; };
@@ -26,9 +32,11 @@
 		31930DC32A2F1F4A00DF556E /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31930DC22A2F1F4A00DF556E /* DetailsVC.swift */; };
 		31930DC72A2F20AC00DF556E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31930DC62A2F20AC00DF556E /* HomeScreen.swift */; };
 		31930DCA2A2F258900DF556E /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31930DC92A2F258900DF556E /* UIColor + Extensions.swift */; };
+		4E75FBD663FF7BAA08193663 /* Pods_BF_NFT_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C4E67EC9683A83A715E1F3 /* Pods_BF_NFT_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AF7AB58652F342DC20A998 /* Pods-BF_NFT_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BF_NFT_App.release.xcconfig"; path = "Target Support Files/Pods-BF_NFT_App/Pods-BF_NFT_App.release.xcconfig"; sourceTree = "<group>"; };
 		31137FBD2A1506D800FF8AD9 /* BF_NFT_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BF_NFT_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31137FC02A1506D800FF8AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31137FC22A1506D800FF8AD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,12 @@
 		31137FCC2A1506DA00FF8AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31137FCE2A1506DA00FF8AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31137FD72A150AB200FF8AD9 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3157AC632A3078E9009D03C7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3157AC672A30795A009D03C7 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
+		3157AC692A30798F009D03C7 /* GenericServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericServices.swift; sourceTree = "<group>"; };
+		3157AC6C2A307D79009D03C7 /* WalletData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WalletData.json; sourceTree = "<group>"; };
+		3157AC6D2A307D79009D03C7 /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		3157AC712A307E28009D03C7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3167C1A92A2CEA2700085E04 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		3167C1AB2A2D2B6F00085E04 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -48,6 +62,8 @@
 		31930DC22A2F1F4A00DF556E /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		31930DC62A2F20AC00DF556E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		31930DC92A2F258900DF556E /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		4B40005AE98ED149B65497AF /* Pods-BF_NFT_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BF_NFT_App.debug.xcconfig"; path = "Target Support Files/Pods-BF_NFT_App/Pods-BF_NFT_App.debug.xcconfig"; sourceTree = "<group>"; };
+		C3C4E67EC9683A83A715E1F3 /* Pods_BF_NFT_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BF_NFT_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +73,22 @@
 			files = (
 				3167C1A22A2CE0AE00085E04 /* FirebaseAuth in Frameworks */,
 				3167C1A42A2CE0AE00085E04 /* FirebaseCrashlytics in Frameworks */,
+				4E75FBD663FF7BAA08193663 /* Pods_BF_NFT_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F959595FDE6D909423AEF41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B40005AE98ED149B65497AF /* Pods-BF_NFT_App.debug.xcconfig */,
+				19AF7AB58652F342DC20A998 /* Pods-BF_NFT_App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		310FC7622A2A1357007FC7E4 /* ViewModel  */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +102,8 @@
 			children = (
 				31137FBF2A1506D800FF8AD9 /* BF_NFT_App */,
 				31137FBE2A1506D800FF8AD9 /* Products */,
+				2F959595FDE6D909423AEF41 /* Pods */,
+				4D4EEFB28309CE2655F46D20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +118,9 @@
 		31137FBF2A1506D800FF8AD9 /* BF_NFT_App */ = {
 			isa = PBXGroup;
 			children = (
+				3157AC702A307E14009D03C7 /* Model */,
+				3157AC6B2A307D79009D03C7 /* Json */,
+				3157AC652A307927009D03C7 /* Services */,
 				31930DBD2A2F1E9700DF556E /* Feature */,
 				318A0DAF2A2E8ED000F7FE5C /* TabBarController */,
 				318A0DAB2A2E206200F7FE5C /* Alert */,
@@ -130,6 +161,48 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		3157AC622A3078D5009D03C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC632A3078E9009D03C7 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3157AC652A307927009D03C7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC662A307942009D03C7 /* HomeServices */,
+				3157AC692A30798F009D03C7 /* GenericServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3157AC662A307942009D03C7 /* HomeServices */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC672A30795A009D03C7 /* HomeServices.swift */,
+			);
+			path = HomeServices;
+			sourceTree = "<group>";
+		};
+		3157AC6B2A307D79009D03C7 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC6C2A307D79009D03C7 /* WalletData.json */,
+				3157AC6D2A307D79009D03C7 /* HomeData.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		3157AC702A307E14009D03C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC712A307E28009D03C7 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3167C1A72A2CE9FE00085E04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +232,7 @@
 		318A0DAE2A2E8EC300F7FE5C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3157AC622A3078D5009D03C7 /* ViewModel */,
 				31930DC52A2F209400DF556E /* VC */,
 				31930DC42A2F208400DF556E /* Screen */,
 			);
@@ -216,6 +290,14 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		4D4EEFB28309CE2655F46D20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C4E67EC9683A83A715E1F3 /* Pods_BF_NFT_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31137FD12A1506DA00FF8AD9 /* Build configuration list for PBXNativeTarget "BF_NFT_App" */;
 			buildPhases = (
+				35D1042867553FBAF60A0C7B /* [CP] Check Pods Manifest.lock */,
 				31137FB92A1506D800FF8AD9 /* Sources */,
 				31137FBA2A1506D800FF8AD9 /* Frameworks */,
 				31137FBB2A1506D800FF8AD9 /* Resources */,
+				E9CCC8981E9205C4D33BA356 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,11 +367,55 @@
 			files = (
 				31137FCD2A1506DA00FF8AD9 /* LaunchScreen.storyboard in Resources */,
 				3167C1A62A2CE93100085E04 /* GoogleService-Info.plist in Resources */,
+				3157AC6E2A307D79009D03C7 /* WalletData.json in Resources */,
+				3157AC6F2A307D79009D03C7 /* HomeData.json in Resources */,
 				31137FCA2A1506DA00FF8AD9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35D1042867553FBAF60A0C7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BF_NFT_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9CCC8981E9205C4D33BA356 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BF_NFT_App/Pods-BF_NFT_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BF_NFT_App/Pods-BF_NFT_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BF_NFT_App/Pods-BF_NFT_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31137FB92A1506D800FF8AD9 /* Sources */ = {
@@ -304,9 +432,13 @@
 				31930DC72A2F20AC00DF556E /* HomeScreen.swift in Sources */,
 				3167C1AE2A2D2BC200085E04 /* String + Extensions.swift in Sources */,
 				318A0DAD2A2E20B100F7FE5C /* Alert.swift in Sources */,
+				3157AC682A30795A009D03C7 /* HomeServices.swift in Sources */,
 				31137FC12A1506D800FF8AD9 /* AppDelegate.swift in Sources */,
 				31137FC32A1506D800FF8AD9 /* SceneDelegate.swift in Sources */,
+				3157AC6A2A30798F009D03C7 /* GenericServices.swift in Sources */,
+				3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */,
 				31930DBF2A2F1F0D00DF556E /* ProfileVC.swift in Sources */,
+				3157AC642A3078E9009D03C7 /* HomeViewModel.swift in Sources */,
 				3167C1AC2A2D2B6F00085E04 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +573,7 @@
 		};
 		31137FD22A1506DA00FF8AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B40005AE98ED149B65497AF /* Pods-BF_NFT_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +602,7 @@
 		};
 		31137FD32A1506DA00FF8AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AF7AB58652F342DC20A998 /* Pods-BF_NFT_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
