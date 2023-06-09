@@ -14,6 +14,10 @@ enum Error: Swift.Error {
     case errorRequest(AFError)
 }
 
+enum typeFetch{
+    case mock
+    case request
+}
 
 protocol GenericServices{
     typealias completion <T> = (_ result: T, _ failure: Error?) -> Void

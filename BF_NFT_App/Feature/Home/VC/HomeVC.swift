@@ -10,6 +10,8 @@ import UIKit
 class HomeVC: UIViewController {
 
     private var Screen : HomeScreen?
+    private var viewModel : HomeViewModel = HomeViewModel()
+    
     
     override func loadView() {
         Screen = HomeScreen()
@@ -22,10 +24,25 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate(delegate: self)
+        viewModel.fetchRequest(typeFetch: .request)
         Screen?.configCollectionView(delegate: self, datasource: self)
         Screen?.configSearchBar(delegate: self)
         Screen?.configTableView(delegate: self, datasource: self)
+        
     }
+    
+}
+
+extension HomeVC : HomeViewModelProtocol{
+    func sucess() {
+        print(#function)
+    }
+    
+    func failure() {
+        print(#function)
+    }
+    
     
 }
 

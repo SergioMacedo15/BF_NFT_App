@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - HomeData
-struct HomeData: Codable {
+struct NFTdata: Codable {
     var logoImage: LogoImage?
     var filterNft: [FilterNft]?
     var nftList: [Nft]?
