@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
-        viewModel.fetchRequest(typeFetch: .request)
+        viewModel.fetchRequest(typeFetch: .mock)
         Screen?.configSearchBar(delegate: self)
     }
     
@@ -50,13 +50,23 @@ extension HomeVC : UISearchBarDelegate {
 
 extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        viewModel.tableViewNumberOfItens
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: NFTTableViewCell.identifier, for: indexPath) as? NFTTableViewCell
+        cell?.setupData(data: viewModel.loadCurrentNftList(indexPath: indexPath))
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        viewModel.heightForRowAtNftList()
     }
 }
+
+
+
 
 extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     

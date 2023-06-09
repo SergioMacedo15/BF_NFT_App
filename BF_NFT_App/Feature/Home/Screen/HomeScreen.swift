@@ -13,7 +13,7 @@ class HomeScreen: UIView {
     lazy var viewBackground : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green//UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
@@ -46,7 +46,7 @@ class HomeScreen: UIView {
         cv.register(NFTFilterCollectionViewCell.self, forCellWithReuseIdentifier: NFTFilterCollectionViewCell.identifier)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = .blue//UIColor (red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        cv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         cv.setCollectionViewLayout(layout, animated: false)
         return cv
     }( )
@@ -60,7 +60,8 @@ class HomeScreen: UIView {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
         //MARK: REGISTER MISSING
-        tv.backgroundColor = .darkGray//UIColor (red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tv.register(NFTTableViewCell.self, forCellReuseIdentifier: NFTTableViewCell.identifier)
+        tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         tv.separatorStyle = .none
         return tv
     }()
@@ -72,7 +73,7 @@ class HomeScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red//UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         addElementes()
         configConstraints()
     }
@@ -94,7 +95,7 @@ class HomeScreen: UIView {
             viewBackground.topAnchor.constraint (equalTo: safeAreaLayoutGuide.topAnchor),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
-            viewBackground.heightAnchor.constraint(equalToConstant:160),
+            viewBackground.heightAnchor.constraint(equalToConstant:180),
             
             
             logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),

@@ -45,6 +45,8 @@ class HomeViewModel{
         }
     }
     
+    //MARK: CollectionViewSection
+    
     public var collectionViewNumberOfItens : Int {
         NFTData?.filterNft?.count ?? 0
     }
@@ -57,7 +59,19 @@ class HomeViewModel{
         return CGSize(width: 100, height:  34 )
     }
     
+    //MARK: TableViewSection
     
+    public var tableViewNumberOfItens : Int {
+        NFTData?.nftList?.count ?? 0
+    }
+    
+    public func loadCurrentNftList(indexPath : IndexPath) -> Nft{
+        return NFTData?.nftList?[indexPath.row] ?? Nft()
+    }
+    
+    public func heightForRowAtNftList () -> CGFloat {
+        return 360
+    }
     
     
     
