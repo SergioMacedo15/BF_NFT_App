@@ -19,6 +19,8 @@
 		3157AC6E2A307D79009D03C7 /* WalletData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3157AC6C2A307D79009D03C7 /* WalletData.json */; };
 		3157AC6F2A307D79009D03C7 /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3157AC6D2A307D79009D03C7 /* HomeData.json */; };
 		3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC712A307E28009D03C7 /* HomeModel.swift */; };
+		3157AC762A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC752A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift */; };
+		3157AC782A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157AC772A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift */; };
 		3167C1A22A2CE0AE00085E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A12A2CE0AE00085E04 /* FirebaseAuth */; };
 		3167C1A42A2CE0AE00085E04 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A32A2CE0AE00085E04 /* FirebaseCrashlytics */; };
 		3167C1A62A2CE93100085E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */; };
@@ -51,6 +53,8 @@
 		3157AC6C2A307D79009D03C7 /* WalletData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WalletData.json; sourceTree = "<group>"; };
 		3157AC6D2A307D79009D03C7 /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
 		3157AC712A307E28009D03C7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		3157AC752A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		3157AC772A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTFilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3167C1A92A2CEA2700085E04 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		3167C1AB2A2D2B6F00085E04 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -122,9 +126,8 @@
 				3157AC6B2A307D79009D03C7 /* Json */,
 				3157AC702A307E14009D03C7 /* Model */,
 				3157AC652A307927009D03C7 /* Services */,
-				31930DBD2A2F1E9700DF556E /* Feature */,
 				318A0DAF2A2E8ED000F7FE5C /* TabBarController */,
-				318A0DAB2A2E206200F7FE5C /* Alert */,
+				31930DBD2A2F1E9700DF556E /* Feature */,
 				31137FC02A1506D800FF8AD9 /* AppDelegate.swift */,
 				31137FC22A1506D800FF8AD9 /* SceneDelegate.swift */,
 				31137FC92A1506DA00FF8AD9 /* Assets.xcassets */,
@@ -203,6 +206,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3157AC732A333DAC009D03C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC742A333DB3009D03C7 /* NFTFilter */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3157AC742A333DB3009D03C7 /* NFTFilter */ = {
+			isa = PBXGroup;
+			children = (
+				3157AC752A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift */,
+				3157AC772A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift */,
+			);
+			path = NFTFilter;
+			sourceTree = "<group>";
+		};
 		3167C1A72A2CE9FE00085E04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +270,8 @@
 		31930DBD2A2F1E9700DF556E /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				3157AC732A333DAC009D03C7 /* Cells */,
+				318A0DAB2A2E206200F7FE5C /* Alert */,
 				31930DC12A2F1F3700DF556E /* Details */,
 				31930DC02A2F1F1100DF556E /* Profile */,
 				318A0DAE2A2E8EC300F7FE5C /* Home */,
@@ -429,6 +451,7 @@
 				3167C1AA2A2CEA2700085E04 /* UIViewController + Extensions.swift in Sources */,
 				31137FD82A150AB200FF8AD9 /* LoginScreen.swift in Sources */,
 				318A0DB12A2E8F0B00F7FE5C /* TabBarController.swift in Sources */,
+				3157AC782A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift in Sources */,
 				31930DC72A2F20AC00DF556E /* HomeScreen.swift in Sources */,
 				3167C1AE2A2D2BC200085E04 /* String + Extensions.swift in Sources */,
 				318A0DAD2A2E20B100F7FE5C /* Alert.swift in Sources */,
@@ -436,6 +459,7 @@
 				31137FC12A1506D800FF8AD9 /* AppDelegate.swift in Sources */,
 				31137FC32A1506D800FF8AD9 /* SceneDelegate.swift in Sources */,
 				3157AC6A2A30798F009D03C7 /* GenericServices.swift in Sources */,
+				3157AC762A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift in Sources */,
 				3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */,
 				31930DBF2A2F1F0D00DF556E /* ProfileVC.swift in Sources */,
 				3157AC642A3078E9009D03C7 /* HomeViewModel.swift in Sources */,

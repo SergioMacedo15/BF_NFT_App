@@ -43,8 +43,9 @@ class HomeScreen: UIView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         //MARK: REGISTER MISSING
+        cv.register(NFTFilterCollectionViewCell.self, forCellWithReuseIdentifier: NFTFilterCollectionViewCell.identifier)
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.showsVerticalScrollIndicator = false
+        cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .blue//UIColor (red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         cv.setCollectionViewLayout(layout, animated: false)
         return cv
@@ -93,7 +94,7 @@ class HomeScreen: UIView {
             viewBackground.topAnchor.constraint (equalTo: safeAreaLayoutGuide.topAnchor),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
-            viewBackground.heightAnchor.constraint(equalToConstant:220),
+            viewBackground.heightAnchor.constraint(equalToConstant:160),
             
             
             logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),

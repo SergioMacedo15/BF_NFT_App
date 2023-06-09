@@ -26,17 +26,15 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(typeFetch: .request)
-        Screen?.configCollectionView(delegate: self, datasource: self)
         Screen?.configSearchBar(delegate: self)
-        Screen?.configTableView(delegate: self, datasource: self)
-        
     }
     
 }
 
 extension HomeVC : HomeViewModelProtocol{
     func sucess() {
-        print(#function)
+        Screen?.configCollectionView(delegate: self, datasource: self)
+        Screen?.configTableView(delegate: self, datasource: self)
     }
     
     func failure() {
@@ -63,11 +61,17 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
 extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        viewModel.collectionViewNumberOfItens
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NFTFilterCollectionViewCell.identifier, for: indexPath) as? NFTFilterCollectionViewCell
+        cell?.setupDataCell(data: viewModel.loadCurrentFilterNFT(indexPath: indexPath))
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        viewModel.sizeforItemFilterNFT()
     }
     
     

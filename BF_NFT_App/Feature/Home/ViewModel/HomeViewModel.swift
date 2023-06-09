@@ -11,6 +11,7 @@ protocol HomeViewModelProtocol: AnyObject{
     func sucess()
     func failure()
 }
+
 class HomeViewModel{
     
     private let services : HomeServices = HomeServices()
@@ -26,23 +27,38 @@ class HomeViewModel{
         case .mock:
             services.getHomeFromJason { result, failure in
                 if result != nil {
-                    print("sucess")
+                    self.NFTData = result
                     self.delegate?.sucess()
                 } else{
-                    print("failure")
                     self.delegate?.failure()
                 }
             }
         case .request:
             services.getHome { result, failure in
                 if result != nil {
-                    print("Sucess")
+                    self.NFTData = result
                     self.delegate?.sucess()
                 } else{
-                    print("Failure")
                     self.delegate?.failure()
                 }
             }
         }
     }
+    
+    public var collectionViewNumberOfItens : Int {
+        NFTData?.filterNft?.count ?? 0
+    }
+    
+    public func loadCurrentFilterNFT(indexPath : IndexPath) -> FilterNft{
+        return NFTData?.filterNft?[indexPath.row] ?? FilterNft() 
+    }
+    
+    public func sizeforItemFilterNFT() -> CGSize {
+        return CGSize(width: 100, height:  34 )
+    }
+    
+    
+    
+    
+    
 }
