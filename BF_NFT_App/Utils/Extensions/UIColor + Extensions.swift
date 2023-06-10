@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    public func backGroundColorApp() -> UIColor{
-        return UIColor (red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+    @nonobjc class var appBackGround: UIColor {
+        return UIColor(red: 0.25, green: 0.25, blue: 0.23, alpha: 1.00)
     }
 }

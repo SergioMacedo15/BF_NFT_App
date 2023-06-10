@@ -14,6 +14,7 @@ class HomeScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        
         return view
     }()
     

@@ -45,7 +45,13 @@ extension HomeVC : HomeViewModelProtocol{
 }
 
 extension HomeVC : UISearchBarDelegate {
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterSearchList(searchText)
+        Screen?.tableView.reloadData()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension HomeVC : UITableViewDelegate, UITableViewDataSource {
@@ -65,9 +71,6 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
-
-
 extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,6 +85,16 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         viewModel.sizeforItemFilterNFT()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.setFilter(Searchtext: Screen?.searchBar.text ?? "", indexPath: indexPath)
+        Screen?.collectionView.reloadData()
+        Screen?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        Screen?.tableView.reloadData()
+        if viewModel.tableViewNumberOfItens > 0 {
+            Screen?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        }
     }
     
     
