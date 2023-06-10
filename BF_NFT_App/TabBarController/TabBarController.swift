@@ -18,9 +18,9 @@ class TabBarVC: UITabBarController {
     private func setupTabBar(){
         let home = UINavigationController(rootViewController: HomeVC())
         let profile = UINavigationController(rootViewController: ProfileVC())
-        let details = UINavigationController(rootViewController: DetailsVC())
+        //let details = UINavigationController(rootViewController: DetailsVC())
         
-        setViewControllers([home, profile, details], animated: true)
+        setViewControllers([home, profile], animated: true)
         tabBar.isTranslucent = false
         tabBar.tintColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
@@ -34,8 +34,8 @@ class TabBarVC: UITabBarController {
         items[0].title = "Home"
         items[1].image = UIImage(systemName: "person.crop.circle")
         items[1].title = "Profile"
-        items[2].image = UIImage(systemName: "gearshape")
-        items[2].title = "Details"
+//        items[2].image = UIImage(systemName: "gearshape")
+//        items[2].title = "Details"
         
         
     }
