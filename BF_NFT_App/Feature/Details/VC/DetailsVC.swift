@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsVC: UIViewController {
-
+    
     private var viewModel : DetailsViewModel = DetailsViewModel()
     private var screen : DetailsScreen?
     
@@ -34,15 +34,25 @@ class DetailsVC: UIViewController {
 
 extension DetailsVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        viewModel.selectCell(indexPath: indexPath, tableView: tableView, delegate: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat()
+        viewModel.heightForRowAt(indexPath: indexPath)
+    }
+}
+
+extension DetailsVC: NftImageTableViewCellScreenProtocol{
+    func tappedCloseButton() {
+        self.dismiss(animated: true)
+    }
+    
+    func tappedmagnifyingGlassButton() {
+        
     }
     
     

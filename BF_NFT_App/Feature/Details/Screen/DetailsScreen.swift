@@ -14,13 +14,16 @@ class DetailsScreen: UIView {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
         //MARK: REGISTER MISSING
-        tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tv.register(NftImageTableViewCell.self, forCellReuseIdentifier: NftImageTableViewCell.identifier)
+        tv.register(NftDescriptionTableViewCell.self, forCellReuseIdentifier: NftDescriptionTableViewCell.identifier)
+        tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         tv.separatorStyle = .none
         return tv
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addElementes()
         configContraints()
     }
