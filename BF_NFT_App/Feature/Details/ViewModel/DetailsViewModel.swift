@@ -49,12 +49,12 @@ class DetailsViewModel: NSObject {
         
     }
 
-    public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
+    public func heightForRowAt(indexPath: IndexPath, Width: CGFloat) -> CGFloat{
         switch typeCell(rawValue: indexPath.row){
         case .ImageCell:
             return 400
         case .Description:
-            return 200
+            return (getDetailsNFT().nftDescription?.height(withConstrainedWidth: Width, font: UIFont.systemFont(ofSize: 18)) ?? 0) + 89
         default:
             return CGFloat()
         }

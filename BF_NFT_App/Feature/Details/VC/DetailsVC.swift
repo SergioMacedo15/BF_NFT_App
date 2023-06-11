@@ -42,7 +42,7 @@ extension DetailsVC : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        viewModel.heightForRowAt(indexPath: indexPath)
+        viewModel.heightForRowAt(indexPath: indexPath, Width: view.frame.width)
     }
 }
 
