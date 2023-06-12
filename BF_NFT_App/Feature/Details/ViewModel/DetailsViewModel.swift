@@ -10,6 +10,7 @@ import UIKit
 enum typeCell: Int{
     case ImageCell = 0
     case Description = 1
+    case LastetDeals = 2
 }
 
 
@@ -26,7 +27,7 @@ class DetailsViewModel: NSObject {
     }
     
     public var numberOfRowsInSection : Int{
-        2
+        3
     }
     
     public func selectCell(indexPath: IndexPath, tableView: UITableView, delegate: DetailsVC) -> UITableViewCell{
@@ -42,11 +43,14 @@ class DetailsViewModel: NSObject {
             let cell = tableView.dequeueReusableCell(withIdentifier: NftDescriptionTableViewCell.identifier, for: indexPath) as? NftDescriptionTableViewCell
             cell?.setupCell(id: self.getDetailsNFT().nftID ?? 0 , title: self.getDetailsNFT().titleLatestDeals ?? "", description: self.getDetailsNFT().nftDescription ?? "")
             return cell ?? UITableViewCell()
-            
+
+        case .LastetDeals :
+            let cell = tableView.dequeueReusableCell(withIdentifier: LastetDealTableViewCell.identifier, for: indexPath) as? LastetDealTableViewCell
+            cell?.setupCell(data: self.getDetailsNFT())
+            return cell ?? UITableViewCell()
         default:
             return UITableViewCell()
         }
-        
     }
 
     public func heightForRowAt(indexPath: IndexPath, Width: CGFloat) -> CGFloat{
@@ -55,6 +59,8 @@ class DetailsViewModel: NSObject {
             return 400
         case .Description:
             return (getDetailsNFT().nftDescription?.height(withConstrainedWidth: Width, font: UIFont.systemFont(ofSize: 18)) ?? 0) + 89
+        case.LastetDeals:
+            return 400
         default:
             return CGFloat()
         }

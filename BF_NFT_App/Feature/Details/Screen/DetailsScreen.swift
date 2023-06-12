@@ -16,6 +16,7 @@ class DetailsScreen: UIView {
         //MARK: REGISTER MISSING
         tv.register(NftImageTableViewCell.self, forCellReuseIdentifier: NftImageTableViewCell.identifier)
         tv.register(NftDescriptionTableViewCell.self, forCellReuseIdentifier: NftDescriptionTableViewCell.identifier)
+        tv.register(LastetDealTableViewCell.self, forCellReuseIdentifier: LastetDealTableViewCell.identifier)
         tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         tv.separatorStyle = .none
         return tv
