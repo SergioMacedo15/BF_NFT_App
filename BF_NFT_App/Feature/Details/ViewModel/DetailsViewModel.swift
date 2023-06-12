@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum typeCell: Int{
+enum typeCellDetails: Int{
     case ImageCell = 0
     case Description = 1
     case LastetDeals = 2
@@ -32,7 +32,7 @@ class DetailsViewModel: NSObject {
     
     public func selectCell(indexPath: IndexPath, tableView: UITableView, delegate: DetailsVC) -> UITableViewCell{
         
-        switch typeCell(rawValue: indexPath.row){
+        switch typeCellDetails(rawValue: indexPath.row){
         
         case .ImageCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: NftImageTableViewCell.identifier, for: indexPath) as? NftImageTableViewCell
@@ -54,7 +54,7 @@ class DetailsViewModel: NSObject {
     }
 
     public func heightForRowAt(indexPath: IndexPath, Width: CGFloat) -> CGFloat{
-        switch typeCell(rawValue: indexPath.row){
+        switch typeCellDetails(rawValue: indexPath.row){
         case .ImageCell:
             return 400
         case .Description:

@@ -41,6 +41,10 @@
 		3157ACB32A375C23009D03C7 /* MagnifyingGlassScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACB22A375C23009D03C7 /* MagnifyingGlassScreen.swift */; };
 		3157ACBB2A379094009D03C7 /* WalletScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACBA2A379094009D03C7 /* WalletScreen.swift */; };
 		3157ACBE2A379106009D03C7 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACBD2A379106009D03C7 /* WalletViewModel.swift */; };
+		3157ACC12A3799D3009D03C7 /* WalletServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC02A3799D3009D03C7 /* WalletServices.swift */; };
+		3157ACC32A379BAE009D03C7 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC22A379BAE009D03C7 /* WalletModel.swift */; };
+		3157ACC62A37A845009D03C7 /* QuotationEthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC52A37A845009D03C7 /* QuotationEthTableViewCell.swift */; };
+		3157ACC92A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */; };
 		3167C1A22A2CE0AE00085E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A12A2CE0AE00085E04 /* FirebaseAuth */; };
 		3167C1A42A2CE0AE00085E04 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A32A2CE0AE00085E04 /* FirebaseCrashlytics */; };
 		3167C1A62A2CE93100085E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */; };
@@ -95,6 +99,10 @@
 		3157ACB22A375C23009D03C7 /* MagnifyingGlassScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassScreen.swift; sourceTree = "<group>"; };
 		3157ACBA2A379094009D03C7 /* WalletScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletScreen.swift; sourceTree = "<group>"; };
 		3157ACBD2A379106009D03C7 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		3157ACC02A3799D3009D03C7 /* WalletServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServices.swift; sourceTree = "<group>"; };
+		3157ACC22A379BAE009D03C7 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		3157ACC52A37A845009D03C7 /* QuotationEthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEthTableViewCell.swift; sourceTree = "<group>"; };
+		3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEthTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3167C1A92A2CEA2700085E04 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		3167C1AB2A2D2B6F00085E04 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -215,6 +223,7 @@
 		3157AC652A307927009D03C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3157ACBF2A3799C0009D03C7 /* WalletServices */,
 				3157AC662A307942009D03C7 /* HomeServices */,
 				3157AC692A30798F009D03C7 /* GenericServices.swift */,
 			);
@@ -242,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				3157AC712A307E28009D03C7 /* HomeModel.swift */,
+				3157ACC22A379BAE009D03C7 /* WalletModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +259,7 @@
 		3157AC732A333DAC009D03C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3157ACC42A37A573009D03C7 /* QuotationEthTableViewCell */,
 				3157ACA42A3743ED009D03C7 /* ListOffersTableViewCell */,
 				3157AC962A361FA2009D03C7 /* LastetDealTableViewCell */,
 				3157AC8F2A3524A8009D03C7 /* NftDescriptionTableViewCell */,
@@ -451,9 +462,35 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3157ACBF2A3799C0009D03C7 /* WalletServices */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACC02A3799D3009D03C7 /* WalletServices.swift */,
+			);
+			path = WalletServices;
+			sourceTree = "<group>";
+		};
+		3157ACC42A37A573009D03C7 /* QuotationEthTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACC72A37A858009D03C7 /* Screen */,
+				3157ACC52A37A845009D03C7 /* QuotationEthTableViewCell.swift */,
+			);
+			path = QuotationEthTableViewCell;
+			sourceTree = "<group>";
+		};
+		3157ACC72A37A858009D03C7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		3167C1A72A2CE9FE00085E04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				318A0DAB2A2E206200F7FE5C /* Alert */,
 				3157AC8C2A34F6CD009D03C7 /* Preview */,
 				3167C1A82A2CEA0800085E04 /* Extensions */,
 			);
@@ -501,9 +538,8 @@
 		31930DBD2A2F1E9700DF556E /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				3157ACAE2A375BD8009D03C7 /* MagnifyingGlass */,
 				3157AC732A333DAC009D03C7 /* Cells */,
-				318A0DAB2A2E206200F7FE5C /* Alert */,
+				3157ACAE2A375BD8009D03C7 /* MagnifyingGlass */,
 				31930DC02A2F1F1100DF556E /* Wallets */,
 				31930DC12A2F1F3700DF556E /* Details */,
 				318A0DAE2A2E8EC300F7FE5C /* Home */,
@@ -693,6 +729,7 @@
 				318A0DB12A2E8F0B00F7FE5C /* TabBarController.swift in Sources */,
 				3157ACB02A375C05009D03C7 /* MagnifyingGlassVC.swift in Sources */,
 				3157ACBB2A379094009D03C7 /* WalletScreen.swift in Sources */,
+				3157ACC12A3799D3009D03C7 /* WalletServices.swift in Sources */,
 				3157AC9A2A361FF6009D03C7 /* LastetDealTableViewCellScrenn.swift in Sources */,
 				3157AC782A333E12009D03C7 /* NFTFilterCollectionViewCellScreen.swift in Sources */,
 				3157ACAD2A375347009D03C7 /* CACornerMask+Extension.swift in Sources */,
@@ -701,7 +738,9 @@
 				3157AC8B2A34EDEC009D03C7 /* NftImageTableViewCellScreen.swift in Sources */,
 				3157AC822A34E56A009D03C7 /* DetailsScreen.swift in Sources */,
 				3157AC842A34E582009D03C7 /* DetailsViewModel.swift in Sources */,
+				3157ACC32A379BAE009D03C7 /* WalletModel.swift in Sources */,
 				3167C1AE2A2D2BC200085E04 /* String + Extensions.swift in Sources */,
+				3157ACC62A37A845009D03C7 /* QuotationEthTableViewCell.swift in Sources */,
 				318A0DAD2A2E20B100F7FE5C /* Alert.swift in Sources */,
 				3157AC892A34EDDD009D03C7 /* NftImageTableViewCell.swift in Sources */,
 				3157AC9F2A36238E009D03C7 /* LastetDealTableViewCellViewModel.swift in Sources */,
@@ -713,6 +752,7 @@
 				3157AC8E2A34F6DD009D03C7 /* ViewController_Priview.swift in Sources */,
 				3157AC6A2A30798F009D03C7 /* GenericServices.swift in Sources */,
 				3157AC762A333DE9009D03C7 /* NFTFilterCollectionViewCell.swift in Sources */,
+				3157ACC92A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift in Sources */,
 				3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */,
 				3157AC7D2A3368A4009D03C7 /* NFTTableViewCellScreen.swift in Sources */,
 				31930DBF2A2F1F0D00DF556E /* WalletVC.swift in Sources */,
