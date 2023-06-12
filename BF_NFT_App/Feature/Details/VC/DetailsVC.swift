@@ -52,7 +52,8 @@ extension DetailsVC: NftImageTableViewCellScreenProtocol{
     }
     
     func tappedmagnifyingGlassButton() {
-        
+        let vc = MagnifyingGlassVC(nftImage: viewModel.getDetailsNFT().nftImage ?? "")
+        self.present(vc, animated: true)
     }
     
     

@@ -44,9 +44,7 @@ class NftImageTableViewCell: UITableViewCell {
     
     public func setupCell(url: String, delegate: NftImageTableViewCellScreenProtocol){
         if let urlImage : URL = URL(string: url){
-            Screen.nftImageView.af.setImage(withURL: urlImage)
-        }else {
-            Screen.nftImageView.image = UIImage(named: "threeButtons")
+            Screen.nftImageView.af.setImage(withURL: urlImage, placeholderImage: UIImage(named: "threeButtons"))
         }
         Screen.delegate(delegate: delegate)
         
