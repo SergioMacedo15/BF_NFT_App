@@ -24,6 +24,7 @@ class LastetDealTableViewCell: UITableViewCell {
         configContraints()
         Screen.configTableViewdelegate(datasource: self, delegate: self)
     }
+     
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -49,18 +50,23 @@ class LastetDealTableViewCell: UITableViewCell {
 }
 
 extension LastetDealTableViewCell : UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListOffersTableViewCell.identifier, for: indexPath) as? ListOffersTableViewCell 
+        cell?.setupCell(data: viewModel.loadCurrentCell(indexPath), isInitial: viewModel.isInitial(indexPath), isFinal: viewModel.isFinal(indexPath))
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         viewModel.heigthForRowAt
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
 }

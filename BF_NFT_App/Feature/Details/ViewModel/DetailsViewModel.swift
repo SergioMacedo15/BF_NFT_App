@@ -60,7 +60,7 @@ class DetailsViewModel: NSObject {
         case .Description:
             return (getDetailsNFT().nftDescription?.height(withConstrainedWidth: Width, font: UIFont.systemFont(ofSize: 18)) ?? 0) + 89
         case.LastetDeals:
-            return 400
+            return heigthLastetDeal.height.rawValue * CGFloat(getDetailsNFT().latestDeals?.count ?? 0) + 75
         default:
             return CGFloat()
         }

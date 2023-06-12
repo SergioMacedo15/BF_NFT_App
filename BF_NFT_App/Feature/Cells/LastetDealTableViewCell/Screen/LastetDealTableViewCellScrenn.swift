@@ -21,8 +21,9 @@ class LastetDealTableViewCellScrenn: UIView {
     lazy var tableView : UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
-        //MARK: REGISTER MISSING
+        tv.register(ListOffersTableViewCell.self, forCellReuseIdentifier: ListOffersTableViewCell.identifier)
         tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tv.showsVerticalScrollIndicator = false
         tv.separatorStyle = .none
         tv.isScrollEnabled = false
         return tv
@@ -57,8 +58,9 @@ class LastetDealTableViewCellScrenn: UIView {
             titleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             tableView.topAnchor.constraint (equalTo: titleLabel.bottomAnchor, constant: 15),
-            tableView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            tableView.trailingAnchor.constraint (equalTo: trailingAnchor, constant: -24)
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            tableView.trailingAnchor.constraint (equalTo: trailingAnchor, constant: -20),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
 
