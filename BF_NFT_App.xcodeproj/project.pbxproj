@@ -45,6 +45,11 @@
 		3157ACC32A379BAE009D03C7 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC22A379BAE009D03C7 /* WalletModel.swift */; };
 		3157ACC62A37A845009D03C7 /* QuotationEthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC52A37A845009D03C7 /* QuotationEthTableViewCell.swift */; };
 		3157ACC92A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */; };
+		3157ACCD2A37BDB3009D03C7 /* LastetTransactionTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACCC2A37BDB3009D03C7 /* LastetTransactionTableViewCellScreen.swift */; };
+		3157ACCF2A37BDCA009D03C7 /* LastetTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACCE2A37BDCA009D03C7 /* LastetTransactionTableViewCell.swift */; };
+		3157ACD22A37CC7A009D03C7 /* LastetTransactionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACD12A37CC7A009D03C7 /* LastetTransactionTableViewCellViewModel.swift */; };
+		3157ACD52A3893FA009D03C7 /* ListTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACD42A3893FA009D03C7 /* ListTransactionTableViewCell.swift */; };
+		3157ACD92A389427009D03C7 /* ListTransactionTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157ACD82A389427009D03C7 /* ListTransactionTableViewCellScreen.swift */; };
 		3167C1A22A2CE0AE00085E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A12A2CE0AE00085E04 /* FirebaseAuth */; };
 		3167C1A42A2CE0AE00085E04 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3167C1A32A2CE0AE00085E04 /* FirebaseCrashlytics */; };
 		3167C1A62A2CE93100085E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */; };
@@ -103,6 +108,11 @@
 		3157ACC22A379BAE009D03C7 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		3157ACC52A37A845009D03C7 /* QuotationEthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEthTableViewCell.swift; sourceTree = "<group>"; };
 		3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEthTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3157ACCC2A37BDB3009D03C7 /* LastetTransactionTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastetTransactionTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3157ACCE2A37BDCA009D03C7 /* LastetTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastetTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		3157ACD12A37CC7A009D03C7 /* LastetTransactionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastetTransactionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		3157ACD42A3893FA009D03C7 /* ListTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		3157ACD82A389427009D03C7 /* ListTransactionTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3167C1A52A2CE93000085E04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3167C1A92A2CEA2700085E04 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		3167C1AB2A2D2B6F00085E04 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +269,8 @@
 		3157AC732A333DAC009D03C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3157ACD32A3893D9009D03C7 /* ListTransactionTableViewCell */,
+				3157ACCA2A37BCDA009D03C7 /* LastetTransactionTableViewCell */,
 				3157ACC42A37A573009D03C7 /* QuotationEthTableViewCell */,
 				3157ACA42A3743ED009D03C7 /* ListOffersTableViewCell */,
 				3157AC962A361FA2009D03C7 /* LastetDealTableViewCell */,
@@ -483,6 +495,49 @@
 			isa = PBXGroup;
 			children = (
 				3157ACC82A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3157ACCA2A37BCDA009D03C7 /* LastetTransactionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACD02A37CC5C009D03C7 /* ViewModel */,
+				3157ACCB2A37BD02009D03C7 /* Screen */,
+				3157ACCE2A37BDCA009D03C7 /* LastetTransactionTableViewCell.swift */,
+			);
+			path = LastetTransactionTableViewCell;
+			sourceTree = "<group>";
+		};
+		3157ACCB2A37BD02009D03C7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACCC2A37BDB3009D03C7 /* LastetTransactionTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3157ACD02A37CC5C009D03C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACD12A37CC7A009D03C7 /* LastetTransactionTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3157ACD32A3893D9009D03C7 /* ListTransactionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACD62A3893FE009D03C7 /* Screen */,
+				3157ACD42A3893FA009D03C7 /* ListTransactionTableViewCell.swift */,
+			);
+			path = ListTransactionTableViewCell;
+			sourceTree = "<group>";
+		};
+		3157ACD62A3893FE009D03C7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3157ACD82A389427009D03C7 /* ListTransactionTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -726,6 +781,7 @@
 				31930DCA2A2F258900DF556E /* UIColor + Extensions.swift in Sources */,
 				3167C1AA2A2CEA2700085E04 /* UIViewController + Extensions.swift in Sources */,
 				31137FD82A150AB200FF8AD9 /* LoginScreen.swift in Sources */,
+				3157ACD52A3893FA009D03C7 /* ListTransactionTableViewCell.swift in Sources */,
 				318A0DB12A2E8F0B00F7FE5C /* TabBarController.swift in Sources */,
 				3157ACB02A375C05009D03C7 /* MagnifyingGlassVC.swift in Sources */,
 				3157ACBB2A379094009D03C7 /* WalletScreen.swift in Sources */,
@@ -744,6 +800,7 @@
 				318A0DAD2A2E20B100F7FE5C /* Alert.swift in Sources */,
 				3157AC892A34EDDD009D03C7 /* NftImageTableViewCell.swift in Sources */,
 				3157AC9F2A36238E009D03C7 /* LastetDealTableViewCellViewModel.swift in Sources */,
+				3157ACD22A37CC7A009D03C7 /* LastetTransactionTableViewCellViewModel.swift in Sources */,
 				3157ACA92A374439009D03C7 /* ListOffersTableViewCellScreen.swift in Sources */,
 				3157ACA72A374429009D03C7 /* ListOffersTableViewCell.swift in Sources */,
 				3157AC682A30795A009D03C7 /* HomeServices.swift in Sources */,
@@ -755,11 +812,14 @@
 				3157ACC92A37A86C009D03C7 /* QuotationEthTableViewCellScreen.swift in Sources */,
 				3157AC722A307E28009D03C7 /* HomeModel.swift in Sources */,
 				3157AC7D2A3368A4009D03C7 /* NFTTableViewCellScreen.swift in Sources */,
+				3157ACCD2A37BDB3009D03C7 /* LastetTransactionTableViewCellScreen.swift in Sources */,
 				31930DBF2A2F1F0D00DF556E /* WalletVC.swift in Sources */,
 				3157AC642A3078E9009D03C7 /* HomeViewModel.swift in Sources */,
 				3157ACBE2A379106009D03C7 /* WalletViewModel.swift in Sources */,
+				3157ACD92A389427009D03C7 /* ListTransactionTableViewCellScreen.swift in Sources */,
 				3157AC932A3524E3009D03C7 /* NftDescriptionTableViewCellScreen.swift in Sources */,
 				3167C1AC2A2D2B6F00085E04 /* LoginViewModel.swift in Sources */,
+				3157ACCF2A37BDCA009D03C7 /* LastetTransactionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

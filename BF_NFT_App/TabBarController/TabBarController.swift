@@ -25,6 +25,12 @@ class TabBarVC: UITabBarController {
         tabBar.tintColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         
+        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance ()
+        tabBarAppearance.configureWithDefaultBackground()
+        tabBarAppearance .backgroundColor = UIColor (red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tabBar.standardAppearance = tabBarAppearance
+        tabBar.scrollEdgeAppearance = tabBarAppearance
+        
         
         //MARK: ADD ICON AND TITLE
         

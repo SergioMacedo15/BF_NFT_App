@@ -15,6 +15,7 @@ class WalletScreen: UIView {
         tv.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         //MARK: MISSING REGISTER
         tv.register(QuotationEthTableViewCell.self, forCellReuseIdentifier: QuotationEthTableViewCell.identifier)
+        tv.register(LastetTransactionTableViewCell.self, forCellReuseIdentifier: LastetTransactionTableViewCell.identifier)
         tv.separatorStyle = .none
         return tv
     }()

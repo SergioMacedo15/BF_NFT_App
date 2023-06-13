@@ -43,7 +43,7 @@ class QuotationEthTableViewCell: UITableViewCell {
     
     public func setupCell(data: QuotationEthereum){
          Screen.coinEthImageView.image = UIImage(named: "coin.ethereum")
-        Screen.ethValueLabel.text = "\(data.ethValue ?? 0)"
+        Screen.ethValueLabel.text = "\(data.ethValue ?? 0) ETH"
         Screen.ethValueInDollarsLabel.text = "$ \(data.valueInDollars ?? 0)"
     }
 

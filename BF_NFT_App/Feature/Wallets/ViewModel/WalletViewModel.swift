@@ -52,7 +52,7 @@ class WalletViewModel {
     }
     
     public var numberOfRowsInSection : Int {
-        1
+        2
     }
     
     public var getQuotationEth : QuotationEthereum{
@@ -72,11 +72,11 @@ class WalletViewModel {
             cell?.setupCell(data: getQuotationEth)
             return cell ?? UITableViewCell()
             
-//        case.latestTransactionsCell:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: NftDescriptionTableViewCell.identifier, for: indexPath) as? NftDescriptionTableViewCell
-//
-//            return cell ?? UITableViewCell()
-//
+        case .latestTransactionsCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LastetTransactionTableViewCell.identifier, for: indexPath) as? LastetTransactionTableViewCell
+            cell?.setupCell(data: latestTransactions)
+            return cell ?? UITableViewCell()
+
         default:
             return UITableViewCell()
         }
@@ -88,8 +88,7 @@ class WalletViewModel {
         case .quotationEthereum:
             return 250
         case .latestTransactionsCell:
-            return 300
-    
+            return heightLastetTransaction.height.rawValue * CGFloat(self.latestTransactions.listOfTransactions?.count ?? 0) + 75
         default:
             return CGFloat()
         }
